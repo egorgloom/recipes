@@ -11,7 +11,7 @@ export default function RecipeItem({recipe}) {
   const isExist = favorites.some(elem => elem.id === recipe.id)
   return (
     <div>
-        {/* <img src="" alt="" /> */}
+        <img src={recipe.image} alt={recipe.name} width={100}/>
         <h2>{recipe.name}</h2>
         <button onClick={()=> toggleFavorites(recipe)}>{isExist ? 'Remove to favorites' : 'Add to favorites'}</button>
       

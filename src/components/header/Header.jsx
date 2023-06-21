@@ -1,14 +1,14 @@
 import React from 'react'
-import { BsFillBookmarkHeartFill } from "react-icons/bs";
-import { useSelector } from 'react-redux';
+import {BsBookmarkHeartFill} from 'react-icons/bs'
+import { useFavorites } from './../../hooks/useFavorites';
 
 
 export default function Header() {
-  const {favorites} = useSelector(state=> state)
+    const {favorites} = useFavorites()
   return (
-    <div>
-      <BsFillBookmarkHeartFill />
+    <>
+            <BsBookmarkHeartFill />
       <span>{favorites.length}</span>
-    </div>
+    </>
   )
 }

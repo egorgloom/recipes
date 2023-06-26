@@ -1,14 +1,17 @@
 import React from 'react'
-import {BsBookmarkHeartFill} from 'react-icons/bs'
+import { BsBookmarkHeartFill } from 'react-icons/bs'
 import { useFavorites } from './../../hooks/useFavorites';
+import classes from './Header.module.css'
 
 
 export default function Header() {
-    const {favorites} = useFavorites()
+  const { favorites } = useFavorites()
   return (
     <>
-            <BsBookmarkHeartFill />
-      <span>{favorites.length}</span>
+    <header className={classes.header}>
+    <BsBookmarkHeartFill />
+      <span className={classes.headerSpan} >{favorites.length}</span>
+    </header>
     </>
   )
 }

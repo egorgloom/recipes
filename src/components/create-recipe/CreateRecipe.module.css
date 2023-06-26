@@ -1,0 +1,29 @@
+.createForm {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+
+}
+
+.createForm p {
+    height: 20px;
+    color: white;
+    font-style: 16px;
+}
+.createForm input:focus {
+    outline: none;
+}
+
+
+.createButton {
+    align-items: flex-start;
+    padding: 0 5px;
+    width: 50%;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+    background-color: rgb(230, 16, 183);
+    color: white;
+    padding: 5px 10px;
+
+}

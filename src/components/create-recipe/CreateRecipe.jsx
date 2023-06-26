@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useCreateRecipeMutation } from '../../store/api/resipe.api'
+import classes from './CreateRecipe.module.css'
 
 const defaultValue = {
     name: '',
@@ -20,7 +21,8 @@ export default function CreateRecipe() {
 
     }
     return (
-        <form onSubmit={handleSubmit}>
+        <form className={classes.createForm} onSubmit={handleSubmit}>
+            <p>Create New Recipe:</p>
             <label>
                 <input
                     type="text"
@@ -37,7 +39,7 @@ export default function CreateRecipe() {
                     onChange={(e) => setRecipe({ ...recipe, image: e.target.value })}
                 />
             </label>
-            <button type="submit">Create</button>
+            <button className={classes.createButton} type="submit">Create</button>
 
         </form>
     )

@@ -9,6 +9,22 @@ export const recipeApi = api.injectEndpoints({
                 url: '/',
                 method: 'POST'
             }),
+            invalidatesTags: ()=> [{
+                type: 'Recipe'
+            }]
         }),
+        deleteRecipe: builder.mutation({
+            query: (recipe) => ({
+                url: `/${recipe}`,
+                method: 'DELETE',
+                credentials: 'include',
+
+            }),
+            invalidatesTags: ()=> [{
+                type: 'Recipe'
+            }]
+        })
     }),
 })
+
+export const {useCreateRecipeMutation, useDeleteRecipeMutation } = recipeApi

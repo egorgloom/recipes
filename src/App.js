@@ -1,4 +1,5 @@
 import './App.css';
+import CreateRecipe from './components/create-recipe/CreateRecipe';
 import Header from './components/header/Header';
 import RecipeItem from './components/recipe-item/RecipeItem';
 import { useGetRecipesQuery } from './store/api/api';
@@ -12,6 +13,7 @@ function App() {
     <div className="App">
       <Header />
       {/* <User /> */}
+      <CreateRecipe />
       {isLoading ? (
         <div>Loading...</div>
       ) : data ? (
